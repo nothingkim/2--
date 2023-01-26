@@ -5,7 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>샤브샤브</title>
         <style media="screen">
-  
+        
+        .btn_open{font-weight:bold; margin:5px; padding:4px 6px; background:#000; color:#fff;}
+        .pop_wrap{position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,.5); font-size:0; text-align:center;}
+        .pop_wrap:after{display:inline-block; height:100%; vertical-align:middle; content:'';}
+        .pop_wrap .pop_inner{display:inline-block; padding:20px 30px; background:#fff; width:200px; vertical-align:middle; font-size:15px;}
+        
+        h2{
+            text-align: center;
+            margin:auto;
+        }
+
+        button{
+            width:100px;
+            height:50px;
+            background-color: black;
+            color: white;
+        }
 
          #header {
             text-align: center;
@@ -47,7 +63,7 @@
 
             #menu {
             width :200px;
-            line-height: 150px;
+            line-height: 124px;
             outline: 5px solid black;
             font-size: 30x;
             margin: 10px;
@@ -84,40 +100,58 @@
         <h1>샤브샤브의 종류 </h1>
         </div>
         <h4>
+
         <div id="menu">
-        <h2><li>일본식 육수</li> <li> 한국식 육수</li> <li> 마라 육수</li> </h2> 
+        <h2> <button href="#pop_up" class ="btn_open"> 추가 </button> <li>일본식 육수</li> <li> 한국식 육수</li> <li> 마라 육수</li> </h2> 
         </div>
+
+        <div id="pop_up" class="pop_wrap" style="display:none;">
+            <div class="pop_inner">
+              <p class="dsc">
+                <b1><span>이름</span></b1><input type="text"  id="name" placeholder="곰돌이 샤브샤브" required><br>
+                <b2><span>이미지</span></b2><input type="text" size=50   height : 100px id="image" required placeholder="https://recipe1.ezmember.co.kr/cache/recipe/2019/07/04/079d66dad83ccc09e81fa700ff668bbf1.jpg" ><br>
+                <b3><span>내용</span></b3><input type="text" id="doc" required placeholder="곰돌이 샤브샤브"  ><br>
+                <button id = "inputbutton"> 입력 </button>
+            </p>
+              <button type="button" class="btn_close">닫기</button>
+            </div>
+          </div>
     </h4> 
 
 
         <div id="imageblock">
-            <h3>
+        <h3>
             <div id="imageinnerblock">
-        <img src= "D:\김그냥\고량주\2주차\이미지\곰돌이.jfif" alt="곰돌이 샤브샤브" width="300px">
+        <img src= "./곰돌이.jfif" alt="곰돌이 샤브샤브" width="300px">
         <span>곰돌이 <br>샤브샤브</span>
         </div>
     
         <div id="imageinnerblock">
-            <img src= "D:\김그냥\고량주\2주차\이미지\스키야키.jpg" alt="스키야키" width="300px">
+            <img src= "./스키야키.jpg" alt="스키야키" width="300px">
             <span>스키야키</span>
         </div>    
 
         <div id="imageinnerblock">
-            <img src= "D:\김그냥\고량주\2주차\이미지\훠궈.jpg" alt="훠궈" width="300px">
+            <img src= "./훠궈.jpg" alt="훠궈" width="300px">
             <span>훠궈</span>
         </div> 
 
         <div id="imageinnerblock">
-            <img src= "D:\김그냥\고량주\2주차\이미지\밀푀유나베.jpg" alt="밀푀유나베" width="300px">
+            <img src= "./밀푀유나베.jpg" alt="밀푀유나베" width="300px">
             <span>밀푀유나베</span>
         </div> 
 
         <div id="imageinnerblock">
-            <img src= "D:\김그냥\고량주\2주차\이미지\칼국수.jfif" alt="칼국수" width="300px">
+            <img src= "./칼국수.jfif" alt="칼국수" width="300px">
             <span>샤브샤브 <br>칼국수</span>
         </div> 
+        <div id="new_block">
+
+        </div>
+
     </h3>
     </div>
 
+    <script src="./add.js"></script>
     </body>
 </html>
